@@ -27,8 +27,10 @@ require 'phpmailer/src/SMTP.php';
 $toemails = array();
 
 $toemails[] = array(
-				'email' => 'your-email@website.com', // Your Email Address
-				'name' => 'Your Name' // Your Name
+				'email' => 'echountasis@outlook.com', // Your Email Address
+				'name' => 'Emmanouil Chountasis', // Your Name
+				'email' => 'elaine.calamatta@gmail.com', // Your Email Address
+				'name' => 'Elaine Calamatta' // Your Name
 			);
 
 
@@ -37,8 +39,8 @@ $toemails[] = array(
 ---------------------------------------------------*/
 
 $fromemail = array(
-				'email' => 'no-reply@website.com', // Company's Email Address (preferably currently used Domain Name)
-				'name' => 'Company Name' // Company Name
+				'email' => 'no-reply@meetusinparos.com', // Company's Email Address (preferably currently used Domain Name)
+				'name' => 'Elaine & Emmanouil' // Company Name
 			);
 
 
@@ -203,7 +205,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 
 	$ar_footer	= !empty( $submits['ar_footer'] ) ? $submits['ar_footer'] : 'Copyrights &copy; ' . date('Y') . ' <strong>SemiColonWeb</strong>. All Rights Reserved.';
 
-	$mail->Subject = !empty( $submits['subject'] ) ? $submits['subject'] : 'Form Response from your Website';
+	$mail->Subject = !empty( $submits['subject'] ) ? $submits['subject'] : 'Thank you for your resposne!';
 	$mail->SetFrom( $fromemail['email'] , $fromemail['name'] );
 
 	if( !empty( $replyto ) ) {
@@ -244,31 +246,31 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 
 	}
 
-	$files = $_FILES;
+	// $files = $_FILES;
 
-	foreach( $files as $file => $filevalue ) {
+	// foreach( $files as $file => $filevalue ) {
 
-		if( is_array( $filevalue['name'] ) ) {
+	// 	if( is_array( $filevalue['name'] ) ) {
 
-			$filecount = count( $filevalue['name'] );
+	// 		$filecount = count( $filevalue['name'] );
 
-			for( $f = 0; $f < $filecount; $f++ ) {
-				if ( isset( $_FILES[ $file ] ) && $_FILES[ $file ]['error'][ $f ] == UPLOAD_ERR_OK ) {
-					$mail->IsHTML(true);
-					$mail->AddAttachment( $_FILES[ $file ]['tmp_name'][ $f ], $_FILES[ $file ]['name'][ $f ] );
-				}
-			}
+	// 		for( $f = 0; $f < $filecount; $f++ ) {
+	// 			if ( isset( $_FILES[ $file ] ) && $_FILES[ $file ]['error'][ $f ] == UPLOAD_ERR_OK ) {
+	// 				$mail->IsHTML(true);
+	// 				$mail->AddAttachment( $_FILES[ $file ]['tmp_name'][ $f ], $_FILES[ $file ]['name'][ $f ] );
+	// 			}
+	// 		}
 
-		} else {
+	// 	} else {
 
-			if ( isset( $_FILES[ $file ] ) && $_FILES[ $file ]['error'] == UPLOAD_ERR_OK ) {
-				$mail->IsHTML(true);
-				$mail->AddAttachment( $_FILES[ $file ]['tmp_name'], $_FILES[ $file ]['name'] );
-			}
+	// 		if ( isset( $_FILES[ $file ] ) && $_FILES[ $file ]['error'] == UPLOAD_ERR_OK ) {
+	// 			$mail->IsHTML(true);
+	// 			$mail->AddAttachment( $_FILES[ $file ]['tmp_name'], $_FILES[ $file ]['name'] );
+	// 		}
 
-		}
+	// 	}
 
-	}
+	// }
 
 	$response = array();
 
