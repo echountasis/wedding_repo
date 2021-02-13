@@ -1,0 +1,35 @@
+{
+    "paths": [
+        {
+            "name": "/items",
+            "lambdaFunction": "weddingrepoa5eecd0a",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/items"
+        }
+    ],
+    "resourceName": "apib8260d74",
+    "apiName": "apib8260d74",
+    "functionArns": [
+        {
+            "lambdaFunction": "weddingrepoa5eecd0a"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-amplify8b86df2ba2c94-staging-164440-authRole",
+        "unAuthRoleName": "amplify-amplify8b86df2ba2c94-staging-164440-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "weddingrepoa5eecd0a",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}
