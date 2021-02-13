@@ -468,7 +468,7 @@
 						<div class="form-widget">
 							<div class="form-result"></div>
 
-							<form id="wedding-rsvp-form" action="include/form.php" method="post" class="row mx-auto mb-5" style="max-width: 500px;">
+							<form id="wedding-rsvp-form" class="row mx-auto mb-5" style="max-width: 500px;">
 
 								<div class="form-process">
 									<div class="css3-spinner">
@@ -477,85 +477,76 @@
 								</div>
 
 								<div class="col-12 form-group">
-									<label for="wedding-rsvp-name">
+									<label for="name">
 										Your Full Name
 									</label>
-									<input type="text" name="wedding-rsvp-name" id="wedding-rsvp-name" required="true" class="form-control required form-control-lg" placeholder="Your Full Name">
+									<input type="text" name="name" id="name" required="true" class="form-control required form-control-lg" placeholder="Your Full Name">
 								</div>
 
 								<div class="col-12 form-group">
-									<label for="wedding-rsvp-email">
+									<label for="email">
 										Your E-mail Address
 									</label>
-									<input type="text" name="wedding-rsvp-email" id="wedding-rsvp-email" required="true" class="form-control required email form-control-lg" placeholder="Your E-mail Address">
+									<input type="text" name="email" id="email" required="true" class="form-control required email form-control-lg" placeholder="Your E-mail Address">
 								</div>
 
 								<div class="col-12 form-group">
-									<label for="wedding-rsvp-guests">
+									<label for="guests">
 										No. of Guests
 									</label>
-									<input type="number" min="1" max="10" name="wedding-rsvp-guests" id="wedding-rsvp-guests" class="form-control required form-control-lg" placeholder="No. of Guests">
+									<input type="number" min="1" max="10" name="guests" id="guests" class="form-control required form-control-lg" placeholder="No. of Guests">
 								</div>
 
 								<div class="col-12 form-group">
-									<label for="wedding-rsvp-events">
+									<label for="events">
 										R.S.V.P.
 									</label>
-									<select name="wedding-rsvp-events" id="wedding-rsvp-events" required="true" class="form-control required form-control-lg">
+									<select name="events" id="events" required="true" class="form-control required form-control-lg">
 										<option value="All Events">Attending</option>
 										<option value="Not Attending">Not Attending</option>
 									</select>
 								</div>
 
 								<div class="col-12 form-group">
-									<label for="wedding-rsvp-country-from">
+									<label for="countryFrom">
 										I am travelling from
 									</label>
-									<select name="wedding-rsvp-country-from" id="wedding-rsvp-country-from" required="true" class="form-control required form-control-lg">
-										<option value="All Events">Greece</option>
-										<option value="Not Attending">Malta</option>
-										<option value="Not Attending">Serbia</option>
-										<option value="Not Attending">United Kingdom</option>
+									<select name="countryFrom" id="countryFrom" required="true" class="form-control required form-control-lg">
+										<option value="Greece">Greece</option>
+										<option value="Malta">Malta</option>
+										<option value="Serbia">Serbia</option>
+										<option value="United Kingdom">United Kingdom</option>
 									</select>
 								</div>
 								
 								<div class="col-12 form-group">
-									<label for="wedding-rsvp-travel-with">
+									<label for="travelWith">
 										I would like to travel from Athens to Paros by
 									</label>
-									<select name="wedding-rsvp-travel-with" id="wedding-rsvp-travel-with" required="false" class="form-control form-control-lg">
-										<option value="All Events">Ferry</option>
-										<option value="Not Attending">Plane</option>
-										<option value="Not Attending">Any</option>
+									<select name="travelWith" id="travelWith" required="false" class="form-control form-control-lg">
+										<option value="Ferry">Ferry</option>
+										<option value="Plane">Plane</option>
+										<option value="Any">Any</option>
 									</select>
 								</div>
 
 								<div class="col-12 form-group">
-									<label for="wedding-rsvp-start-on">
+									<label for="startOn">
 										Start my journey on
 									</label>
-									<input type="date" id="wedding-rsvp-start-on" name="wedding-rsvp-start-on" value="" class="form-control form-control-lg" />
+									<input type="date" id="startOn" name="startOn" value="" class="form-control form-control-lg" />
 								</div>
 
 								<div class="col-12 form-group">
-									<label for="wedding-rsvp-back-on">
+									<label for="backOn">
 										Be back at home on
 									</label>
-									<input type="date" id="wedding-rsvp-back-on" name="wedding-rsvp-back-on" value="" class="form-control form-control-lg" />
-								</div>
-
-								<div class="col-12 form-group d-none">
-									<input type="text" id="wedding-rsvp-botcheck" name="wedding-rsvp-botcheck" value="" class="form-control" />
+									<input type="date" id="backOn" name="backOn" value="" class="form-control form-control-lg" />
 								</div>
 
 								<div class="col-12 form-group mb-0">
-									<button type="submit" name="wedding-rsvp-submit" id="wedding-rsvp-submit" class="button button-3d btn-block m-0 button-dark button-xlarge" value="submit">Submit</button>
+									<button type="submit" name="submit" id="submit" class="button button-3d btn-block m-0 button-dark button-xlarge" value="submit">Submit</button>
 								</div>
-
-								<input type="hidden" name="prefix" value="wedding-rsvp-">
-								<input type="hidden" name="subject" value="Wedding RSVP">
-								<input type="hidden" name="message[success]" value="RSVP Confirmation Received!">
-
 							</form>
 
 						</div>
@@ -595,6 +586,8 @@
 
 	<!-- For Countdown -->
 	<script src="js/components/moment.js"></script>
+
+	<script src="include/testjs.js"></script>
 
 	<!-- Footer Scripts
 	============================================= -->

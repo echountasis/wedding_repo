@@ -10,14 +10,6 @@
       "StackName": "amplify-amplify8b86df2ba2c94-staging-164440",
       "StackId": "arn:aws:cloudformation:us-east-2:781485654629:stack/amplify-amplify8b86df2ba2c94-staging-164440/c4a89640-6e1a-11eb-afc8-0a9519ec89e8",
       "AmplifyAppId": "dgf7gdu7tyds8"
-    },
-    "categories": {
-      "function": {
-        "weddingrepoa5eecd0a": {
-          "deploymentBucketName": "amplify-amplify8b86df2ba2c94-staging-164440-deployment",
-          "s3Key": "amplify-builds/weddingrepoa5eecd0a-51482f6677356a507946-build.zip"
-        }
-      }
     }
   }
 }
