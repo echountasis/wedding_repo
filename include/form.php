@@ -19,7 +19,6 @@ require 'phpmailer/src/Exception.php';
 require 'phpmailer/src/PHPMailer.php';
 require 'phpmailer/src/SMTP.php';
 
-
 /*-------------------------------------------------
 	Receiver's Email
 ---------------------------------------------------*/
@@ -49,7 +48,7 @@ $fromemail = array(
 ---------------------------------------------------*/
 
 // Add this only if you use reCaptcha with your Contact Forms
-$recaptcha_secret = ''; // Your reCaptcha Secret
+$recaptcha_secret = 'this-is-my-c@ptch-s£cre£t'; // Your reCaptcha Secret
 
 
 /*-------------------------------------------------
@@ -94,6 +93,8 @@ $spam_keywords = array(
 ---------------------------------------------------*/
 
 if( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
+	echo '{ "alert": "error", "message": "' . "I am here 1" . '" }';
+	exit;
 
 	$prefix		= !empty( $_POST['prefix'] ) ? $_POST['prefix'] : '';
 	$submits	= $_POST;
@@ -126,7 +127,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 		exit;
 	}
 
-
+	console.log("I am here 2");
 	/*-------------------------------------------------
 		SPAM Protection
 	---------------------------------------------------*/
@@ -174,7 +175,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 			exit;
 		}
 	}
-
+	console.log("I am here 3");
 	$template	= !empty( $submits['template'] ) ? $submits['template'] : 'html';
 	$html_title	= !empty( $submits['html_title'] ) ? $submits['html_title'] : 'Form Response';
 	$forcerecap	= ( !empty( $submits['force_recaptcha'] ) && $submits['force_recaptcha'] != 'false' ) ? true : false;
@@ -218,7 +219,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 			$mail->AddReplyTo( $replyto_e );
 		}
 	}
-
+	console.log("I am here 4");
 	foreach( $toemails as $toemail ) {
 		$mail->AddAddress( $toemail['email'] , $toemail['name'] );
 	}
@@ -271,7 +272,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 	// 	}
 
 	// }
-
+	console.log("I am here 5");
 	$response = array();
 
 	foreach( $fields as $fieldname => $fieldvalue ) {
@@ -306,6 +307,8 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 					</td>
 				</tr>
 			</table>';
+
+	console.log("I am here 6");
 
 	if( $template == 'text' ) {
 		$body = implode( "<br>", $response ) . $referrer;
@@ -392,6 +395,8 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 		$autoresponder->MsgHTML( $ar_body );
 	}
 
+	console.log("I am here 7");
+	
 	$mail->MsgHTML( $body );
 	$mail->CharSet = "UTF-8";
 	$sendEmail = $mail->Send();
