@@ -41,7 +41,7 @@ $(function() {
     //   var countryFrom = $('#countryFrom')[0].value
       var travelWith = $('#travelWith')[0].value
       var startOn = $('#startOn')[0].value
-      var backOn = $('#backOn')[0].value
+      // var backOn = $('#backOn')[0].value
 
       if(name === "" || email === "" || guests === "") return;
   
@@ -53,7 +53,7 @@ $(function() {
         // countryFrom: countryFrom,
         travelWith: travelWith,
         startOn: startOn,
-        backOn: backOn
+        //backOn: backOn
     });
 
     return result;
