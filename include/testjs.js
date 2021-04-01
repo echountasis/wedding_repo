@@ -38,10 +38,10 @@ $(function() {
       var email = $('#email')[0].value
       var guests = $('#guests')[0].value
       var events = $('#events')[0].value
-    //   var countryFrom = $('#countryFrom')[0].value
+      // var countryFrom = $('#countryFrom')[0].value
       var travelWith = $('#travelWith')[0].value
-      var startOn = $('#startOn')[0].value
-      // var backOn = $('#backOn')[0].value
+     // var startOn = $('#startOn')[0].value
+     // var backOn = $('#backOn')[0].value
 
       if(name === "" || email === "" || guests === "") return;
   
@@ -52,7 +52,7 @@ $(function() {
         events: events,
         // countryFrom: countryFrom,
         travelWith: travelWith,
-        startOn: startOn,
+        //startOn: startOn,
         //backOn: backOn
     });
 
