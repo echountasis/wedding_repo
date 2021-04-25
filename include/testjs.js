@@ -10,13 +10,17 @@ const  SubmitData = async (params) => {
     const myJson = await response.json(); //extract JSON from the http response
 
     $('#wedding-rsvp-form').css("display","none");
+
+    var attending = params.events === "All Events";
     
     if( myJson.email === params.email) {
         var name = myJson.name.split(" ")[0];
         var html = "<div class='style-msg2 successmsg'>" +
-                        "<div class='msgtitle'>Hey " + name + ", we received your reservation!</div>" +
+                        "<div class='msgtitle'>Hey " + name + ", we received your " + (attending ? "reservation" : "response") + "!</div>" +
                         "<div class='sb-msg'>" +
-                        "We are so excited to see you in Paros. If you wish to change the details you shared with us you can come back, fill the form again and use the same email address. We will contact you once we have more details!"
+                        (attending ? 
+                            "We are so excited to see you in Paros. If you wish to change the details you shared with us you can come back, fill the form again and use the same email address until 30th of May (if the date has passed kindly contact us directly)!"
+                            : "We are so sorry that you cannot make it. In case something change in the future and you will be able to attend, you can come back and update your details using the same email until 30th May 2021 (if the date has passed kindly contact us directly).") +
                         "</div>" +
                     "</div>";
         $('.form-result').append(html);
