@@ -39,7 +39,7 @@ $(function() {
       var guests = $('#guests')[0].value
       var events = $('#events')[0].value
       // var countryFrom = $('#countryFrom')[0].value
-      var travelWith = $('#travelWith')[0].value
+    //   var travelWith = $('#travelWith')[0].value
      // var startOn = $('#startOn')[0].value
      // var backOn = $('#backOn')[0].value
 
@@ -51,7 +51,7 @@ $(function() {
         guests: guests,
         events: events,
         // countryFrom: countryFrom,
-        travelWith: travelWith,
+        // travelWith: travelWith,
         //startOn: startOn,
         //backOn: backOn
     });
